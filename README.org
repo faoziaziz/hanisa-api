@@ -12,7 +12,19 @@ key varchar(100) NOT NULL,
 value varchar(250) NOT NULL,
 rand smallint NOT NULL);
 #+END_SRC
-
+Then i should nedd to create table database for portofolio called portofolio.
+#+BEGIN_SRC sql
+CREATE TABLE portofolio (
+id serial PRIMARY KEY NOT NULL,
+short_desc varchar(300) NOT NULL,
+long_desc text NOT NULL,
+link_ref varchar(300),
+link_pic varchar(300)
+);
+#+END_SRC
+id used for identity portofolio, short_desc just short description for this portofolio,
+long_desc used for long description for this portofolio, link_ref is used for refference
+link, and link_pic is used for picture thumbnail for this sql.
 * Some Test post 
 #+BEGIN_SRC bash
 curl --header "Content-Type: application/json" \
