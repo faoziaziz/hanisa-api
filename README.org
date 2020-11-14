@@ -17,7 +17,7 @@ Then i should nedd to create table database for portofolio called portofolio.
 CREATE TABLE portofolio (
 id serial PRIMARY KEY NOT NULL,
 short_desc varchar(300) NOT NULL,
-long_desc text NOT NULL,
+long_desc text,
 link_ref varchar(300),
 link_pic varchar(300)
 );

@@ -1,3 +1,8 @@
+/*
+  author : Aziz Amerul Faozi
+  desc  : ini digunakan sebagai main controller
+*/
+
 package tech.faozi.hanisa.controller;
 
 
