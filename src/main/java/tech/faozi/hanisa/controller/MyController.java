@@ -18,10 +18,11 @@ public class MyController {
     @GetMapping("/showCities")
     public String findCities(Model model) {
 
-        var cities = (List<City>) cityService.findAll();
+        //var cities = (List<City>) cityService.findAll();
+	List<City> cities = (List<City>) cityService.findAll();
 
         model.addAttribute("cities", cities);
 
-        return "showCities";
+        return "templates/showCities";
     }
 }
