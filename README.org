@@ -1,6 +1,18 @@
 #+Title: Hanisa API
+
 * Database Schema 
 This part used to declare how the data will flow in database.
+** Portofolio Schema
+Some table must be created. But fisrt i think we need to create database
+the database name is should be hanisadb. I need create table to test api first
+this called rest table
+#+BEGIN_SRC sql
+CREATE TABLE rest (id serial PRIMARY KEY NOT NULL,
+key varchar(100) NOT NULL,
+value varchar(250) NOT NULL,
+rand smallint NOT NULL);
+#+END_SRC
+
 * Some Test post 
 #+BEGIN_SRC bash
 curl --header "Content-Type: application/json" \
