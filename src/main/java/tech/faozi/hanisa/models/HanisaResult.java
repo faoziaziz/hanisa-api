@@ -1,7 +1,8 @@
 package tech.faozi.hanisa.models;
 
 public class HanisaResult {
-    private int id, rand;
+    private int id;
+    private String short_desc;
     // getter dan setter
 
     public int getId() {
@@ -12,12 +13,12 @@ public class HanisaResult {
         this.id = id;
     }
 
-    public int getRand() {
-        return rand;
+    public String getShortDesc() {
+        return short_desc;
     }
 
-    public void setRand(int rand) {
-        this.rand = rand;
+    public void setShortDesc(String short_desc) {
+        this.short_desc = short_desc;
     }
 
 }

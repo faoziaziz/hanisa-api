@@ -2,7 +2,7 @@ package tech.faozi.hanisa.models;
 
 public class Hanisa {
     private int id;
-    private String key, value;
+    private String short_desc;
 
     public int getId() {
         return id;
@@ -13,11 +13,11 @@ public class Hanisa {
     }
 
   
-    public String getValue() {
-        return value;
+    public String getShortDesc() {
+        return short_desc;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setShortDesc(String short_desc) {
+        this.short_desc = short_desc;
     }
 }

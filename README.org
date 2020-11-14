@@ -25,6 +25,11 @@ link_pic varchar(300)
 id used for identity portofolio, short_desc just short description for this portofolio,
 long_desc used for long description for this portofolio, link_ref is used for refference
 link, and link_pic is used for picture thumbnail for this sql.
+
+Some insert mode i should add to this postgresql 
+#+BEGIN_SRC
+INSERT INTO portofolio (id, short_desc) VALUES(69, "Just checking ")
+#+END_SRC
 * Some Test post 
 #+BEGIN_SRC bash
 curl --header "Content-Type: application/json" \

@@ -10,12 +10,12 @@ public class HanisaMapper implements RowMapper<HanisaResult> {
     public HanisaResult mapRow(ResultSet rs, int rowNum) throws SQLException {
         Hanisa hanisa = new Hanisa();
         hanisa.setId(rs.getInt("id"));
-        hanisa.setKey(rs.getString("short_desc"));
-        hanisa.setValue(rs.getString("long_desc"));
+        hanisa.setShortDesc(rs.getString("short_desc"));
+        //hanisa.setValue(rs.getString("long_desc"));
 
         HanisaResult hanisaResult = new HanisaResult();
         hanisaResult.setId(rs.getInt("id"));
-        hanisaResult.setRand(rs.getInt("id"));
+        hanisaResult.setShortDesc(rs.getString("short_desc"));
         return hanisaResult;
     }
 }
