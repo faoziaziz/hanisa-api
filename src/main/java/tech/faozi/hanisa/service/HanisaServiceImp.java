@@ -24,6 +24,11 @@ public class HanisaServiceImp implements HanisaService{
         return hanisaDao.getHanisaById(id);
     }
 
+    @Override
+    public void addHanisa(Hanisa hanisa){
+	hanisaDao.addHanisa(hanisa);
+    }
+
 
 
 }

@@ -37,4 +37,11 @@ curl --header "Content-Type: application/json" \
   --data '{"key":"1234","value":"gentleman"}' \
   http://server.faozi.tech:4561/rest/
 #+END_SRC
+Other hell you can post with bellow command
+#+BEGIN_SRC bash
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"id":45,"shortDesc":"mantap pisan"}' \
+  http://server.faozi.tech:4561/portofolio/
+#+END_SRC
 

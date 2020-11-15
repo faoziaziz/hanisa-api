@@ -1,3 +1,8 @@
+/*
+  @author : Aziz Amerul Faozi
+  @desk : this code use for main controller 
+*/
+
 package tech.faozi.hanisa.controller;
 
 import tech.faozi.hanisa.models.Hanisa;
@@ -28,6 +33,13 @@ public class HanisaController {
     public ResponseEntity<List<HanisaResult>> getAll() {
         List<HanisaResult> listHanisa = hanisaService.getAll();
         return new ResponseEntity<List<HanisaResult>>(listHanisa, HttpStatus.OK);
+    }
+
+    @PostMapping("/")
+    public ResponseEntity<HanisaResult> addHanisa(@RequestBody Hanisa hanisa){
+	hanisaService.addHanisa(hanisa);
+	HanisaResult hanisa2 = hanisaService.getHanisaById(69);
+	return new ResponseEntity<HanisaResult>(hanisa2, HttpStatus.OK);
     }
 
 }
