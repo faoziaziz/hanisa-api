@@ -35,8 +35,8 @@ public class HanisaDaoImp implements HanisaDao {
 
     @Override
     public void addHanisa(Hanisa hanisa){
-	String sql="INSERT INTO portofolio(id, short_desc, long_desc) VALUES (?, ?, ?)";
-	jdbcTemplate.update(sql, hanisa.getId(), hanisa.getShortDesc(), hanisa.getLongDesc());
+	String sql="INSERT INTO portofolio(id, short_desc, long_desc, link_ref, link_pic) VALUES (?, ?, ?, ?, ?)";
+	jdbcTemplate.update(sql, hanisa.getId(), hanisa.getShortDesc(), hanisa.getLongDesc(), hanisa.getLinkRef(), hanisa.getLinkPic());
     }
 
 

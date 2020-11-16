@@ -7,6 +7,8 @@ public class Hanisa {
     private String short_desc;
     @Lob
     private String long_desc;
+    private String link_ref;
+    private String link_pic;
 
     public int getId() {
         return id;
@@ -15,9 +17,6 @@ public class Hanisa {
     public void setId(int id) {
         this.id = id;
     }
-
-    
-
   
     public String getShortDesc() {
         return short_desc;
@@ -35,6 +34,29 @@ public class Hanisa {
 
     public void setLongDesc(String long_desc){
 	this.long_desc=long_desc;
+    }
+
+    /* link refferece */
+    public String getLinkRef(){
+	return link_ref;
+    }
+    
+    public void setLinkRef(String link_ref){
+	this.link_ref = link_ref;
+
+    }
+
+
+    /* link picture */
+    public String getLinkPic(){
+
+	return link_pic;
+
+    }
+
+    public void setLinkPic(String link_pic){
+	this.link_pic=link_pic;
+
     }
 
     

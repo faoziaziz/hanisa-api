@@ -6,6 +6,8 @@ public class HanisaResult {
     private String short_desc;
     @Lob
     private String long_desc;
+    private String link_ref;
+    private String link_pic;
     // getter dan setter
 
     public int getId() {
@@ -31,6 +33,27 @@ public class HanisaResult {
 
     public void setLongDesc(String long_desc){
 	this.long_desc=long_desc;
+
+    }
+
+    /* link referense */
+    public String getLinkRef(){
+	return link_ref;
+
+    }
+
+    public void setLinkRef(String link_ref){
+	this.link_ref = link_ref;
+
+    }
+
+    public String getLinkPic(){
+	return link_pic;
+
+    }
+
+    public void setLinkPic(String link_pic){
+	this.link_pic=link_pic;
 
     }
 

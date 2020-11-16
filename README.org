@@ -44,4 +44,10 @@ curl --header "Content-Type: application/json" \
   --data '{"id":45,"shortDesc":"mantap pisan"}' \
   http://server.faozi.tech:4561/portofolio/
 #+END_SRC
-
+untuk melakukan check posting lebih lanjut
+#+BEGIN_SRC bash
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"id":49,"shortDesc":"Kang mantap", "longDesc":"Bang masukkin dong", "linkRef":"enak bang", "linkPic":"Akhh"}' \
+  http://server.faozi.tech:4561/portofolio/
+#+END_SRC
