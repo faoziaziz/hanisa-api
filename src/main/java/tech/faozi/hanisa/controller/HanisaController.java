@@ -18,8 +18,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(maxAge=3600)
+
 @Controller
+
 @RequestMapping("portofolio")
 public class HanisaController {
 
@@ -27,14 +28,15 @@ public class HanisaController {
     HanisaService hanisaService;
 
     
-    @CrossOrigin(origins="/**")
-
+    //    @CrossOrigin(origins="https://hanisa.faozi.tech")
+    @CrossOrigin(origins="*")
     @GetMapping("/{id}")
     public ResponseEntity<HanisaResult> getById(@PathVariable("id") int id) {
         HanisaResult hanisa = hanisaService.getHanisaById(id);
         return new ResponseEntity<HanisaResult>(hanisa, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins="*")
     @GetMapping("/")
     public ResponseEntity<List<HanisaResult>> getAll() {
         List<HanisaResult> listHanisa = hanisaService.getAll();
