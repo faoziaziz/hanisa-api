@@ -6,8 +6,8 @@ public class Hanisa {
 
 
     @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(columnDefinition = "serial")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "serial")
     private int id;
     private String short_desc;
     @Lob
