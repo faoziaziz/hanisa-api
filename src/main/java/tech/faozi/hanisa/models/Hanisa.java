@@ -3,6 +3,11 @@ package tech.faozi.hanisa.models;
 import javax.persistence.*;
 
 public class Hanisa {
+
+
+    @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(columnDefinition = "serial")
     private int id;
     private String short_desc;
     @Lob
