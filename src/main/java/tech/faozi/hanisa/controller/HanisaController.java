@@ -14,14 +14,20 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+//import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
+@CrossOrigin(maxAge=3600)
 @Controller
 @RequestMapping("portofolio")
 public class HanisaController {
+
     @Autowired
     HanisaService hanisaService;
+
+    
+    @CrossOrigin(origins="/**")
 
     @GetMapping("/{id}")
     public ResponseEntity<HanisaResult> getById(@PathVariable("id") int id) {
@@ -38,7 +44,7 @@ public class HanisaController {
     @PostMapping("/")
     public ResponseEntity<HanisaResult> addHanisa(@RequestBody Hanisa hanisa){
 	hanisaService.addHanisa(hanisa);
-	HanisaResult hanisa2 = hanisaService.getHanisaById(69);
+	HanisaResult hanisa2 = hanisaService.getHanisaById(413);
 	return new ResponseEntity<HanisaResult>(hanisa2, HttpStatus.OK);
     }
 

@@ -11,11 +11,13 @@ public class HanisaMapper implements RowMapper<HanisaResult> {
         Hanisa hanisa = new Hanisa();
         hanisa.setId(rs.getInt("id"));
         hanisa.setShortDesc(rs.getString("short_desc"));
+	hanisa.setLongDesc(rs.getString("long_desc"));
         //hanisa.setValue(rs.getString("long_desc"));
 
         HanisaResult hanisaResult = new HanisaResult();
         hanisaResult.setId(rs.getInt("id"));
         hanisaResult.setShortDesc(rs.getString("short_desc"));
+	hanisaResult.setLongDesc(rs.getString("long_desc"));
         return hanisaResult;
     }
 }
