@@ -1,0 +1,47 @@
+#+Title: Hanisa API
+
+* Database Schema 
+This part used to declare how the data will flow in database.
+** Portofolio Schema
+Some table must be created. But fisrt i think we need to create database
+the database name is should be hanisadb. I need create table to test api first
+this called rest table
+#+BEGIN_SRC sql
+CREATE TABLE rest (id serial PRIMARY KEY NOT NULL,
+key varchar(100) NOT NULL,
+value varchar(250) NOT NULL,
+rand smallint NOT NULL);
+#+END_SRC
+Then i should nedd to create table database for portofolio called portofolio.
+#+BEGIN_SRC sql
+CREATE TABLE portofolio (
+id serial PRIMARY KEY NOT NULL,
+short_desc varchar(300) NOT NULL,
+long_desc text,
+link_ref varchar(300),
+link_pic varchar(300)
+);
+#+END_SRC
+id used for identity portofolio, short_desc just short description for this portofolio,
+long_desc used for long description for this portofolio, link_ref is used for refference
+link, and link_pic is used for picture thumbnail for this sql.
+
+Some insert mode i should add to this postgresql 
+#+BEGIN_SRC
+INSERT INTO portofolio (id, short_desc) VALUES(69, "Just checking ")
+#+END_SRC
+* Some Test post 
+#+BEGIN_SRC bash
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"key":"1234","value":"gentleman"}' \
+  http://server.faozi.tech:4561/rest/
+#+END_SRC
+Other hell you can post with bellow command
+#+BEGIN_SRC bash
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"id":45,"shortDesc":"mantap pisan"}' \
+  http://server.faozi.tech:4561/portofolio/
+#+END_SRC
+

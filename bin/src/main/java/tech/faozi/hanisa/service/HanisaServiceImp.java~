@@ -1,0 +1,29 @@
+package tech.faozi.hanisa.service;
+
+import tech.faozi.hanisa.dao.RestDao;
+import tech.faozi.hanisa.models.Rest;
+import tech.faozi.hanisa.models.RestResult;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class RestServiceImp implements RestService{
+
+    @Autowired
+    private RestDao restDao;
+
+    @Override
+    public List<RestResult> getAll() {
+        return restDao.getAll();
+    }
+
+    @Override
+    public HanisaResult getHanisaById(int id) {
+        return restDao.getHanisaById(id);
+    }
+
+
+
+}

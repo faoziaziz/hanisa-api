@@ -1,0 +1,9 @@
+# Hanisa API
+
+```sh
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"key":"1234","value":"gentleman"}' \
+  http://server.faozi.tech:4561/rest/
+```
+

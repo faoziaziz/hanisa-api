@@ -1,0 +1,21 @@
+package tech.faozi.hanisa.models;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class HanisaMapper implements RowMapper<HanisaResult> {
+    @Override
+    public HanisaResult mapRow(ResultSet rs, int rowNum) throws SQLException {
+        Hanisa hanisa = new Hanisa();
+        hanisa.setId(rs.getInt("id"));
+        hanisa.setKey(rs.getString("key"));
+        hanisa.setValue(rs.getString("value"));
+
+        HanisaResult hanisaResult = new HanisaResult();
+        hanisaResult.setId(rs.getInt("id"));
+        hanisaResult.setRand(rs.getInt("rand"));
+        return hanisaResult;
+    }
+}
